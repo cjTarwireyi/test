@@ -1,0 +1,69 @@
+Created By: Michael Alan Hendricks
+Created Date: 12/4/2018
+Last Updated By: 
+Last Updated Date:
+
+
+Entity Framework Core:
+
+Implementation Options: 
+	- Using Migrations
+	- Code First migrations
+	- Scaffolding (Simular to reverse engineering)
+
+Entity Framework Commands:
+	- Add-Migration
+		- Adds a new migration
+	- Script-Migraton
+		- Generates a SQL script from migration
+	- Update-Database
+		- Updates the database to a specified migration
+		- update-database -verbose
+	- Drop-Database
+		- Drop the database
+	- Get-DbContext
+		- Gets information about a DbContext type
+	- Remove-Migration
+		- Removes the last migration
+	- Scaffold-DbContext
+		- Scaffolds a DbContext and entity types for a database
+		- You can specify which tables you want to generate entities for by adding the -Tables argument to the command above.			
+			- For example: -Tables Lead,LeadAddress
+		- To enable lazy loading, you can make navigation properties virtual.
+
+Implementation Requirements for Scaffolding:
+
+	- Nuget Packages:
+		- Microsoft.EntityFrameworkCore.SqlServer
+		- Microsoft.EntityFrameworkCore.Design
+		- Microsoft.EntityFrameworkCore.Tools
+	
+	- Nuget Packages install options: 		
+		- package manager console
+			- Install-Packages PackagesName
+				-Used for adding packages
+		- nuget package manager
+		
+Implementation:
+	- Scaffolding:
+		- Scaffolding is used in EF Core in places of reverse engineering with previous EF versions.
+		- This create models from a database scheme
+		- Implentations:
+			- Package manager console:
+				- get-help scaffold-dbcontext
+					- This command will gives you some commands to help with the implementation.
+				- get-help scaffold-dbcontext -detailed
+					- Gives more information on commands
+				- scaffold-dbcontext "ConnectionStr" Provider					
+					- This command creates your models from database.
+					- Connection string should be in qoutes
+					- Provider don't need quotes
+						- ie Microsoft.EntityFrameworkCore
+					- scaffold-dbcontext command:
+						- scaffold-dbcontext "Server=(localdb)\mssqllocaldb;Database=ObtainLeads;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+					- Force scaffold-dbcontext:
+						- scaffold-dbcontext "Server=(localdb)\mssqllocaldb;Database=ObtainLeads;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+			
+		
+	
+	

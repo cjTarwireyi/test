@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.1" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ObtainLeads.Business\ObtainLeads.Business.csproj" />
+    <ProjectReference Include="..\ObtainLeads.Domain\ObtainLeads.Domain.csproj" />
+    <ProjectReference Include="..\ObtainLeads.Repository\ObtainLeads.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,43 @@
+Repository Standard:
+
+Folder Structure: 
+	- DomainModelNameRepo
+		- Impl
+		
+Class Folder Structure: 
+	- Root Folder:
+		- IRepository.cs
+		- DomainModelNameRepo Folder:
+			- IDomainModelNameRepository.cs
+			- Impl Folder:
+				DomainModelNameRepository.cs
+
+Interface Structure:
+	- Order interface methods:
+		- Get methods
+		- Insert methods
+		- Update methods
+		- Delete methods
+
+Implementation Structure:
+	- Implement:
+		- IRepository
+		- IDomainModelNameRepository
+		- IDisoposable
+			- Provides a mechanism for releasing unmanaged resources. (Microsoft)
+
+	- Order implementation methods:
+		- Get methods
+		- Insert methods
+		- Update methods
+		- Delete methods
+		- Save method
+
+	- Regions:
+		- Properties
+		- Constructor
+		- Methods
+			- Public
+			- Protected
+			- Private
+	

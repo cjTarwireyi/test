@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20181212060450_initial.cs" />
+    <Compile Remove="Migrations\20181212064638_Renamed tables.cs" />
+    <Compile Remove="Migrations\20181212185159_Testing.cs" />
+    <Compile Remove="Migrations\20181212185728_Test Column.cs" />
+    <Compile Remove="Migrations\20181212192316_Remove Test.cs" />
+    <Compile Remove="Migrations\20181212192430_Remove Test column.cs" />
+    <Compile Remove="Migrations\20181213110619_Auto Increment Table Id%27s On Add.cs" />
+    <Compile Remove="Migrations\20181213111019_Recreate ObtainLeads database.cs" />
+    <Compile Remove="Migrations\20181213111330_Auto Increment Table Id%27s.cs" />
+    <Compile Remove="Migrations\20181213111536_Auto Increment AddresTypeId.cs" />
+    <Compile Remove="Migrations\20181213112311_Test Auto Increments.cs" />
+    <Compile Remove="Migrations\20181213112457_Test Auto Increments with key.cs" />
+    <Compile Remove="Migrations\20181213113008_Test UseSqlServerIdentityColumn.cs" />
+    <Compile Remove="Migrations\20181213113303_Test 2.cs" />
+    <Compile Remove="Migrations\20181213113549_Revert.cs" />
+    <Compile Remove="Migrations\20181213124626_Using HasKey Test.cs" />
+    <Compile Remove="Migrations\20181213125358_HasKey.cs" />
+    <Compile Remove="Migrations\20181213130315_initial.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
